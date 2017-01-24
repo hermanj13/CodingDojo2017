@@ -1,0 +1,54 @@
+Jians-MBP:desktop jianzhang$ mkdir DojoAssignments
+Jians-MBP:desktop jianzhang$ cd DojoAssignments
+Jians-MBP:DojoAssignments jianzhang$ mkdir WebFundamentals
+Jians-MBP:DojoAssignments jianzhang$ mkdir Python
+Jians-MBP:DojoAssignments jianzhang$ mkdir MEAN
+Jians-MBP:DojoAssignments jianzhang$ mkdir Ruby
+Jians-MBP:DojoAssignments jianzhang$ mkdir iOS
+Jians-MBP:DojoAssignments jianzhang$ mkdir netCore
+Jians-MBP:DojoAssignments jianzhang$ cd webfundamentals
+Jians-MBP:webfundamentals jianzhang$ touch about.txt
+Jians-MBP:webfundamentals jianzhang$ cd ..
+Jians-MBP:DojoAssignments jianzhang$ cd Python
+Jians-MBP:Python jianzhang$ ls
+Jians-MBP:Python jianzhang$ touch about.txt
+Jians-MBP:Python jianzhang$ cd ..
+Jians-MBP:DojoAssignments jianzhang$ cd mean
+Jians-MBP:mean jianzhang$ touch about.txt
+Jians-MBP:mean jianzhang$ cd ..
+Jians-MBP:DojoAssignments jianzhang$ cd Ruby
+Jians-MBP:Ruby jianzhang$ touch about.txt
+Jians-MBP:Ruby jianzhang$ cd ..
+Jians-MBP:DojoAssignments jianzhang$ cd ios
+Jians-MBP:ios jianzhang$ touch about.txt
+Jians-MBP:ios jianzhang$ cd ..
+Jians-MBP:DojoAssignments jianzhang$ cd netCore
+Jians-MBP:netCore jianzhang$ touch about.txt
+Jians-MBP:netCore jianzhang$ ls
+about.txt
+Jians-MBP:netCore jianzhang$ cd ..
+Jians-MBP:DojoAssignments jianzhang$ cd webfundamentals
+Jians-MBP:webfundamentals jianzhang$ mkdir Git
+Jians-MBP:webfundamentals jianzhang$ mkdir HTML
+Jians-MBP:webfundamentals jianzhang$ mkdir CSS
+Jians-MBP:webfundamentals jianzhang$ mkdir Javascript
+Jians-MBP:webfundamentals jianzhang$ cd git
+Jians-MBP:git jianzhang$ touch about.txt
+Jians-MBP:git jianzhang$ cd ..
+Jians-MBP:webfundamentals jianzhang$ cd html
+Jians-MBP:html jianzhang$ touch about.txt
+Jians-MBP:html jianzhang$ cd ..
+Jians-MBP:webfundamentals jianzhang$ cd css
+Jians-MBP:css jianzhang$ touch about.txt
+Jians-MBP:css jianzhang$ cd ..
+Jians-MBP:webfundamentals jianzhang$ cd javascript
+Jians-MBP:javascript jianzhang$ touch about.txt
+Jians-MBP:javascript jianzhang$ ls
+about.txt
+Jians-MBP:javascript jianzhang$ cd html
+-bash: cd: html: No such file or directory
+Jians-MBP:javascript jianzhang$ cd ..
+Jians-MBP:webfundamentals jianzhang$ cd html
+Jians-MBP:html jianzhang$ touch indetation.html
+Jians-MBP:html jianzhang$ ls -R
+about.txt	indetation.html
