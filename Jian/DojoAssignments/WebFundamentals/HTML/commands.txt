@@ -1,0 +1,13 @@
+cd ..
+mkdir test
+touch index.html
+touch style.css
+touch commands.txt
+cp index.html index2.html
+rm style.css
+cd ..
+mkdir destination
+cd test
+mv index2.html /users/jianzhang/desktop/destination
+cd ..
+rm -rf destination
