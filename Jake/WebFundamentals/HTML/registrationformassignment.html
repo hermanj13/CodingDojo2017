@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Registration Form</title>
+</head>
+
+<body>
+    <h1>My Registration Form</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td><label for="first_name">First Name: </label></td>
+                <td><input type="text" id="first_name" name="first_name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="last_name">Last Name: </label></td>
+                <td><input type="text" id="last_name" name="last_name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email </label></td>
+                <td><input type="text" id="email" name="email"></td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Password </label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="pw_confirm">PW Confirm </label></td>
+                <td><input type="password" id="pw_confirm" name="pw_confirm"></td>
+            </tr>
+            <tr>
+                <td><label for="birthday">Birthday </label></td>
+                <td><input type="date" id="birthday" name="birthday"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="gender">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+    </div>
+    <div class="description">
+        <p>
+            A short description about yourself:
+        </p>
+        <textarea name="description"></textarea>
+    </div>
+    <div class="langage">
+        <label for="language">Favorite Language</label>
+        <select name="language" id="language">
+          <option value="javascript">JavaScript</option>
+          <option value="apache">APACHE</option>
+          <option value="ruby">Ruby</option>
+      </select>
+    </div>
+    <input type="submit" value="Submit">
+</body>
+
+</html>
