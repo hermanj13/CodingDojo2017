@@ -1,6 +1,7 @@
 *{
   margin: 0px;
   padding: 0px;
+
 }
 
 /**********Wrapper**********/
@@ -14,7 +15,7 @@
 #innerWrapper{
   width: 900px;
   height: 686px;
-  background-color: #2B1F2E
+  background: radial-gradient(#6F5964, #2B1F2E);
 }
 /**********Header**********/
 #header{
@@ -42,21 +43,24 @@
   border: 1px solid black;
 }
 
-.navBoxes{
-  width:115px;
-  height: 29px;
-  /*border-left: 1px solid black;*/
+li{
   border-right: 1px solid black;
+  height: 29px;
   text-align: center;
+  list-style: none;
   display: inline-block;
+  padding: 0px 40px;
 }
 
-.navBoxes a{
+li a{
   position: relative;
   top: 5px;
+  color: blue;
 }
 
 /**********Main Body**********/
+
+/**********Upper Content**********/
 #body{
   width: 900px;
   height: 237px;
@@ -80,54 +84,49 @@
   margin-left: 21px;
 }
 
-.upperContentBoxHeader{
-  height: 32px;
-  width: 375px;
+.upperContentBoxes p{
+  height: 27px;
   background: linear-gradient(#CECACE, #868492,#CECACE);
   font-weight: bold;
-}
-
-.upperContentBoxHeader p{
   position: relative;
-  left: 5px;
-  top: 5px;
+  padding: 5px 0px 0px 5px;
 }
 
-.upperContentBoxesText{
-  width: 375px;
+.upperContentBoxes h4{
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+#upperContentText{
   height: 208px;
   font-size: 12px;
-  padding-top: 5px;
   padding-left: 5px;
+  background: transparent;
+  font-weight: normal;
 }
+
+/**********Midcontent**********/
 
 #midContent{
-  width: 900px;
   height: 24px;
+  padding-left: 750px;
 }
-#midContentContainer{
-  width: 150px;
-  height: 24px;
-  position: absolute;
-  left: 750px;
 
-}
-#midContentContainer img{
+#midContent img{
   width: 12px;
   height: 12px;
   display: inline-block;
   position: relative;
-  top: 4px;
-}
-#midContentContainer p{
-  color: #5C729C;
-  font-size: 8px;
-  padding-top: 3px;
-  display: inline-block;
-  position: relative;
   top: 2px;
 }
+#midContent p{
+  color: #5C729C;
+  font-size: 8px;
+  display: inline-block;
+}
+
 /**********Lower Content**********/
+
 #lowerContent{
   width: 900px;
   height: 409px;
@@ -143,17 +142,11 @@
   margin-right: 12px;
 }
 
-.lowerContentBoxHeader{
-  height: 32px;
-  width: 205px;
+.lowerContentBoxes p{
+  height: 27px;
   background: linear-gradient(#CECACE, #868492,#CECACE);
   font-weight: bold;
-}
-
-.lowerContentBoxHeader p{
-  position: relative;
-  left: 5px;
-  top: 5px;
+  padding: 5px 0px 0px 5px
 }
 
 .lowerContentBoxes img{
@@ -161,12 +154,13 @@
   height: 112px;
 }
 
-.lowerContentBoxesText{
-  width: 205px;
+#lowerContentText{
   height: 200px;
   font-size: 12px;
   padding-top: 5px;
   padding-left: 5px;
+  background: transparent;
+  font-weight: normal;
 }
 
 .readMore{
