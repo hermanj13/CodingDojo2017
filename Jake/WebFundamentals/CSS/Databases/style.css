@@ -154,7 +154,7 @@ li a{
   height: 112px;
 }
 
-#lowerContentText{
+.lowerContentBoxes .lowerContentText{
   height: 200px;
   font-size: 12px;
   padding-top: 5px;
