@@ -8,4 +8,3 @@ return (arr);
 }
 
 prevLength(["Jake","purple","lemon","black","3,27","miller"]);
-;
