@@ -1,8 +1,8 @@
 function time(hour,minute,period){
 if(minute <= 30){
-  var minDesc = "just after";
+  minute = "just after";
 } else{
-  var minDesc = "almost";
+  minute = "almost";
   hour = hour+1;
 }
 
@@ -15,7 +15,7 @@ if(period === "AM"){
   return;
 }
 
-console.log("It's", minDesc, hour, period);
+console.log("It's", minute, hour, period);
 }
 
 time(9,10,"AM");
