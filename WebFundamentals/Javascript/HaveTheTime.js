@@ -1,13 +1,10 @@
-var hour = 7;
-var minute = 40;
-var period = "AM";
-
+function time(hour,minute,period){
 if(minute <= 30){
   var minDesc = "just after";
 }
 else{
   var minDesc = "almost";
-  hour = hour+1
+  hour = hour+1;
 }
 
 if(period === "AM"){
@@ -22,3 +19,4 @@ else{
 }
 
 console.log("It's", minDesc, hour, period);
+}
