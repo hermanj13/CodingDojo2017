@@ -1,4 +1,4 @@
-function EaO(arr){
+function evenAddOdd(arr){
   var even=0;
   var odd=0;
   for(var i=0; i<arr.length; i++){
@@ -21,4 +21,4 @@ function EaO(arr){
   }
 }
 
-EaO([3,2,4,5,4,6,2,4,9,7,3]);
+evenAddOdd([3,2,4,5,4,6,2,4,9,7,3]);
