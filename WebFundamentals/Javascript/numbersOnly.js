@@ -1,6 +1,6 @@
 function numbersArray(arr){
 var newArray = [];
-  for(i = 0; i < arr.length - 1; i++){
+  for(var i = 0; i < arr.length - 1; i++){
     if(typeof arr[i] === "number"){
       newArray.push(arr[i]);
     }
