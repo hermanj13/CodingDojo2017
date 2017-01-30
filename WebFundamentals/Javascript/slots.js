@@ -6,10 +6,10 @@ function slots(quarters, stopValue){
               var winnings = Math.floor((Math.random() * 50) + 50);
               quarters = quarters - 1 + winnings;
               console.log("We Have A Winner");
-              console.log("You have " + quarters + " remaining!");
+              console.log("You have " + quarters + " quarters remaining!");
           } else {
               quarters = quarters - 1;
-              console.log("You have " + quarters + " remaining!");
+              console.log("You have " + quarters + " quarters remaining!");
           }
           if (quarters >= stopValue){
             console.log("You have over " + stopValue + " quarters! " + (quarters - stopValue) + " more to be exact!");
@@ -19,4 +19,4 @@ function slots(quarters, stopValue){
 
 }
 
-slots(40, 200);
+slots(40, 10);
