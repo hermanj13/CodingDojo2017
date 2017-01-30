@@ -18,4 +18,4 @@ if(period === "AM"){
 console.log("It's", minute, hour, period);
 }
 
-time(9,10,"AM");
+time(9,10,"PM");

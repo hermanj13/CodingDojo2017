@@ -1,5 +1,5 @@
 function time(hour,minute,period){
-if(hour === 12 && period === "AM" && minute === 0){
+if(hour == 12 && period === "AM" && minute === 0){
   console.log("It's midnight");
   return;
 }
@@ -8,7 +8,7 @@ if(hour === 12 && period === "PM" && minute === 0){
   return;
 }
 
-if(minute > 0 && minute < 15){
+if(minute >= 0 && minute < 15){
   minute = "just after";
 } else if(minute === 15){
   minute = "quarter after";
@@ -21,30 +21,32 @@ if(minute > 0 && minute < 15){
 } else if(minute === 45){
   minute = "quarter till";
   hour = hour+1;
+  if(hour === 13){
+    hour = hour - 12;
+  }
 } else if(minute > 45 && minute < 60){
   minute = "almost";
   hour = hour+1;
+  if(hour === 13){
+    hour = hour - 12;
+  }
 } else{
   console.log("Invalid minutes");
   return;
 }
-console.log(minute);
 
+if(period === "AM"){
+  period = "in the morning";
+} else if (period === "PM" && hour <= 6){
+  period = "in the afternoon";
+} else if (period === "PM"){
+  period = "at night";
+} else{
+  console.log("invalid period");
+  return;
+}
 
-
-// if(period === "AM"){
-//   period = "in the morning";
-// }
-// else if (period === "PM"){
-//   period = "in the evening";
-// }
-// else{
-//   console.log("invalid period");
-//   return;
-// }
-
-// console.log("It's", minute, hour, period);
-
+console.log("It's", minute, hour, period);
 
 }
-time(3,15,"AM");
+time(12,00,"PM");
