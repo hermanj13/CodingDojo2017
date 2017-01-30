@@ -1,5 +1,5 @@
 function time(hour,minute,period){
-if(hour == 12 && period === "AM" && minute === 0){
+if(hour === 12 && period === "AM" && minute === 0){
   console.log("It's midnight");
   return;
 }
@@ -49,4 +49,4 @@ if(period === "AM"){
 console.log("It's", minute, hour, period);
 
 }
-time(12,00,"PM");
+time(12,0,"PM");
