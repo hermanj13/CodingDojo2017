@@ -40,18 +40,17 @@ while (z < 1000){
   var repeat = 10000;
   var quarters = 500;
   var stopValue = 1000;
-  for(var x = 1; x < repeat; x++){
+  for(let x = 1; x < repeat; x++){
     arr.push(slots(quarters, stopValue));
   }
-  var i = 0;
   remove(arr);
   var odds;
   odds = (arr.length / repeat)*100;
   arrOdds.push(odds);
   z++;
 }
-var sum = 0
-for (i = 0; i < arrOdds.length; i++){
+var sum = 0;
+for (let i = 0; i < arrOdds.length; i++){
   sum = sum + arrOdds[i];
 }
 odds = sum / arrOdds.length;
