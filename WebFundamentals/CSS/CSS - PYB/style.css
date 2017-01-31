@@ -1,51 +1,58 @@
 /*CSS reset settings here*/
-*{
- margin: 0px;
- padding: 0px;
+
+* {
+    margin: 0px;
+    padding: 0px;
 }
-#wrapper{
- width: 950px;
- background-color: silver;
- padding: 15px;
+
+#wrapper {
+    width: 950px;
+    background-color: silver;
+    padding: 15px;
 }
-#header{
- height: 150px;
- background-color: green;
- display: block;
- margin-bottom: 15px;
+
+#header {
+    height: 150px;
+    background-color: green;
+    display: block;
+    margin-bottom: 15px;
 }
-#navigation{
- height: 300px;
- width: 200px;
- background-color: blue;
- display: inline-block;
- vertical-align: top;
- margin-right: 15px;
+
+#navigation {
+    height: 300px;
+    width: 200px;
+    background-color: blue;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
 }
-#main_content{
- height: 400px;
- width: 700px;
- background-color: red;
- display: inline-block;
- vertical-align: top;
- padding-right: 15px;
- padding-left: 15px;
+
+#main_content {
+    height: 400px;
+    width: 700px;
+    background-color: red;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 15px;
+    padding-left: 15px;
 }
-.subcontents{
- height: 200px;
- width: 210px;
- background-color: yellow;
- display: inline-block;
- position: relative;
- top: 15px;
- left: 10px;
- margin-right: 10px;
+
+.subcontents {
+    height: 200px;
+    width: 210px;
+    background-color: yellow;
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: 10px;
+    margin-right: 10px;
 }
-#advertisement{
- height: 120px;
- width: 660px;
- background-color: purple;
- position: relative;
- top: 30px;
- left: 10px;
+
+#advertisement {
+    height: 120px;
+    width: 660px;
+    background-color: purple;
+    position: relative;
+    top: 30px;
+    left: 10px;
 }
