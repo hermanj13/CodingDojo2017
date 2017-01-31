@@ -22,4 +22,4 @@ function secLarge(arr){
   return max2;
 }
 
-console.log(secLarge([77777,77777,77777]))
+console.log(secLarge([77777,77777,77777]));

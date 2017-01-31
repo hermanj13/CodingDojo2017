@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My jQuery Basic Assignment</title>
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <script type="text/javascript" src="initial.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="click">
+        <h1>Click</h1>
+        <h4>Click Button To Get An Alert</h4>
+        <h5>Code:</h5>
+        <code>$('.clickButton').click(function() {<br />
+            alert("You have clicked a button!");<br />
+        });</code>
+        <div class="button" id="clickButton">
+            Click Me!
+        </div>
+    </div>
+    <div id="hide">
+        <h1>Hide</h1>
+        <h4>Click Button To Hide Button</h4>
+        <h5>Code:</h5>
+        <code>$('.hideButton').click(function() { <br />
+          $('.hideButton').hide('fast', function() { <br />
+            alert('OH NO! I AM HIDDEN!'); <br />
+          });<br />
+        });</code>
+        <div class="button" id="hideButton">
+            Click Me!
+        </div>
+    </div>
+    <div id="show">
+        <h1>Show</h1>
+        <h4>Click Button To Show Something!</h4>
+        <h5>Code:</h5>
+        <code>$('#showButton').click(function() { <br />
+          $("#showText").show('fast');<br />
+        });</code>
+        <div class="button" id="showButton">
+            Click Me!
+        </div>
+        <h1 id="showText">HERE I AM!</h1>
+    </div>
+    <div id="toggle">
+        <h1>Toggle</h1>
+        <h4>Click Button To Toggle Something!</h4>
+        <h5>Code:</h5>
+        <code>$('#toggleButton').click(function() {<br />
+          $("#toggleText").toggle('fast');<br />
+        });</code>
+        <div class="button" id="toggleButton">
+            Click Me!
+        </div>
+        <h1 id="toggleText">HERE I AM!</h1>
+    </div>
+    <div id="slideDown">
+        <h1>SlideDown</h1>
+        <h4>Click Button To Slide Something!</h4>
+        <h5>Code:</h5>
+        <code>$('#slideDownButton').click(function() { <br />
+          $("#slideDownImg").slideDown('slow');<br />
+        });</code>
+        <div class="button" id="slideDownButton">
+            Click Me!
+        </div>
+        <img src="yellowbelt.png" alt="img" id="slideDownImg" />
+    </div>
+    <div id="slideUp">
+        <h1>SlideUp</h1>
+        <h4>Click Button To Slide Something!</h4>
+        <h5>Code:</h5>
+        <code></code>
+        <div class="button" id="slideUpButton">
+            Click Me!
+        </div>
+        <img src="yellowbelt.png" alt="img" id="slideUpImg" />
+    </div>
+    <div id="slideToggle">
+        <h1>SlideToggle</h1>
+        <h4>Click Button To Slide Something!</h4>
+        <h5>Code:</h5>
+        <code>$('#slideToggleButton').click(function() { <br />
+          $("#slideToggleImg").slideToggle('slow');<br />
+        });</code>
+        <div class="button" id="slideToggleButton">
+            Click Me!
+        </div>
+        <img src="yellowbelt.png" alt="img" id="slideToggleImg" />
+    </div>
+    <div id="fadeIn">
+        <h1>FadeIn</h1>
+        <h4>Click Button To FadeIn Something!</h4>
+        <h5>Code:</h5>
+        <code></code>
+        <div class="button" id="fadeInButton">
+            Click Me!
+        </div>
+        <img src="yellowbelt.png" alt="img" id="fadeInImg" />
+    </div>
+    <div id="fadeOut">
+        <h1>FadeOut</h1>
+        <h4>Click Button To FadeOut Something!</h4>
+        <h5>Code:</h5>
+        <code></code>
+        <div class="button" id="fadeOutButton">
+            Click Me!
+        </div>
+        <img src="yellowbelt.png" alt="img" id="fadeOutImg" />
+    </div>
+    <div id="addClass">
+        <h1>AddClass</h1>
+    </div>
+    <div id="before">
+        <h1>Before</h1>
+    </div>
+    <div id="after">
+        <h1>After</h1>
+    </div>
+    <div id="append">
+        <h1>Append</h1>
+    </div>
+    <div id="html">
+        <h1>HTML</h1>
+    </div>
+    <div id="attr">
+        <h1>Attr</h1>
+    </div>
+    <div id="val">
+        <h1>Val</h1>
+    </div>
+    <div id="text">
+        <h1>Text</h1>
+    </div>
+    <div id="data">
+        <h1>Data</h1>
+    </div>
+</body>
+
+</html>

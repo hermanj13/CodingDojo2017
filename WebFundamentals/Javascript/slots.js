@@ -37,7 +37,7 @@ var z = 0;
 var arrOdds = [];
 while (z < 1000){
   var arr = [];
-  var repeat = 10000;
+  var repeat = 1000;
   var quarters = 500;
   var stopValue = 1000;
   for(let x = 1; x < repeat; x++){

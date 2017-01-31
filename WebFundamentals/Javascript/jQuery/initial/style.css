@@ -1,0 +1,28 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    margin: 2% 15%;
+    padding: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.button {
+    margin: 5px 42.5%;
+    width: 15%;
+}
+
+#showText {
+    display: none;
+}
+
+#slideDownImg {
+    display: none;
+}
+
+#fadeInImg {
+    display: none;
+}
