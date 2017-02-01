@@ -95,7 +95,9 @@
         <h1>FadeIn</h1>
         <h4>Click Button To FadeIn Something!</h4>
         <h5>Code:</h5>
-        <code></code>
+        <code>$("#fadeInButton").click(function() { <br />
+          $("#fadeInImg").fadeIn("slow"); <br />
+        });</code>
         <div class="button" id="fadeInButton">
             Click Me!
         </div>
@@ -105,7 +107,9 @@
         <h1>FadeOut</h1>
         <h4>Click Button To FadeOut Something!</h4>
         <h5>Code:</h5>
-        <code></code>
+        <code>$("#fadeInButton").click(function() { <br />
+          $("#fadeInImg").fadeIn("slow"); <br />
+        });</code>
         <div class="button" id="fadeOutButton">
             Click Me!
         </div>
@@ -113,9 +117,30 @@
     </div>
     <div id="addClass">
         <h1>AddClass</h1>
+        <h4>Click Button To AddClass Something!</h4>
+        <h5>Code:</h5>
+        <code>$("#addClassButton").click(function() { <br />
+            $(".base").removeClass("base").addClass("red");<br />
+        });</code>
+        <div class="button" id="addClassButton">
+            Click Me!
+        </div>
+        <p class="base">
+            I'm so excited to see what happens when the button gets clicked!
+        </p>
     </div>
     <div id="before">
         <h1>Before</h1>
+        <h4>Click Button To Before Something!</h4>
+        <h5>Code:</h5>
+        <code>$("#beforeButton").click(function() { <br />
+            $("#beforeImg").before("I AM BEFORE YOU!!!!"); <br />
+        });
+        </code>
+        <div class="button" id="beforeButton">
+            Click Me!
+        </div>
+        <img src="yellowbelt.png" alt="img" id="beforeImg" />
     </div>
     <div id="after">
         <h1>After</h1>

@@ -1,0 +1,82 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 1500px;
+    height: 900px;
+    background-color: black;
+    margin: 0px 0px 0px 200px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 1500px 900px;
+}
+
+#selectArena {
+    display: block;
+    margin: 325px auto;
+    width: 300px;
+    height: 150px;
+    background-color: grey;
+    border: 3px solid purple;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#buttonBox {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.arenaButton {
+    background-color: white;
+    width: 30%;
+    border: 2px solid black;
+    margin: 2px;
+}
+
+.arenaButton:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+#totalPlayer {
+    display: none;
+}
+
+#selectPlayers {
+    display: block;
+    margin: 325px auto;
+    width: 300px;
+    height: 150px;
+    background-color: grey;
+    border: 3px solid purple;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#players {
+    width: 1500px;
+    display: flex;
+    position: relative;
+    bottom: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#leftPlayer {
+    position: relative;
+    left: 250px;
+    width: 350px;
+    display: none;
+}
+
+#rightPlayer {
+    position: relative;
+    left: 550px;
+    width: 350px;
+    display: none;
+}
