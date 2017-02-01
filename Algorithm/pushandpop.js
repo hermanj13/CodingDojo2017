@@ -15,7 +15,7 @@ console.log(instertAt([1, 2, 3, 4, 5, 6, 7, 8, 9], 9, 28));
 
 function removeAt(arr, index) {
     if (index < arr.length) {
-        temp = arr[index];
+        var temp = arr[index];
         for (let i = index; i < arr.length; i++) {
             arr[i] = arr[i + 1];
         }
