@@ -29,38 +29,38 @@ $(document).ready(function() {
     });
 
     $("#leftNinjas").on("change", function() {
-        if ($(this).val() == "Raphael") {
+        if ($(this).val() === "Raphael") {
             $("#leftPlayer img").attr("src", "raphael.png");
             $("#leftPlayer").css("display", "block");
         }
-        if ($(this).val() == "Leonardo") {
+        if ($(this).val() === "Leonardo") {
             $("#leftPlayer img").attr("src", "leo.png");
             $("#leftPlayer").css("display", "block");
         }
-        if ($(this).val() == "Donatello") {
+        if ($(this).val() === "Donatello") {
             $("#leftPlayer img").attr("src", "donny.png");
             $("#leftPlayer").css("display", "block");
         }
-        if ($(this).val() == "Michelangelo") {
+        if ($(this).val() === "Michelangelo") {
             $("#leftPlayer img").attr("src", "mikey.png");
             $("#leftPlayer").css("display", "block");
         }
     });
 
     $("#rightNinjas").on("change", function() {
-        if ($(this).val() == "Raphael") {
+        if ($(this).val() === "Raphael") {
             $("#rightPlayer img").attr("src", "raphael.png");
             $("#rightPlayer").css("display", "block");
         }
-        if ($(this).val() == "Leonardo") {
+        if ($(this).val() === "Leonardo") {
             $("#rightPlayer img").attr("src", "leo.png");
             $("#rightPlayer").css("display", "block");
         }
-        if ($(this).val() == "Donatello") {
+        if ($(this).val() === "Donatello") {
             $("#rightPlayer img").attr("src", "donny.png");
             $("#rightPlayer").css("display", "block");
         }
-        if ($(this).val() == "Michelangelo") {
+        if ($(this).val() === "Michelangelo") {
             $("#rightPlayer img").attr("src", "mikey.png");
             $("#rightPlayer").css("display", "block");
         }
