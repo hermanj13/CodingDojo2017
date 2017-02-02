@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,13 +10,50 @@
 </head>
 
 <body>
-    <div id="table">
-        <thead>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email Adress</th>
-            <th>Contact #</th>
-        </thead>
+    <div id="wrapper">
+        <div>
+            <table id="table">
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Adress</th>
+                    <th>Contact #</th>
+                </thead>
+                <tbody>
+
+
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h1>Add a User</h1>
+            <form id="userForm">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="first_name">First Name: </label></td>
+                            <td><input type="text" id="first_name" name="first_name"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="last_name">Last Name: </label></td>
+                            <td><input type="text" id="last_name" name="last_name"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="email">Email </label></td>
+                            <td><input type="text" id="email" name="email"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="phone">Contact no:</label></td>
+                            <td><input type="text" id="phone" name="phone"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="Add User">
+            </form>
+        </div>
     </div>
 </body>
 
