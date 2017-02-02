@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
     $(".spongebob").click(function() {
-        $(this).fadeOut('fast');
+        $(this).fadeOut("fast");
     });
 
     $("#button").click(function() {
-        $(".spongebob").fadeIn('fast');
+        $(".spongebob").fadeIn("fast");
     });
 
 
