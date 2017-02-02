@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#wrapper {
+    width: 100vw;
+    padding: 5%
+}
+
+.spongebob {
+    height: auto;
+    width: 200px;
+    padding: 5%;
+}
+
+#button {
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    background-repeat: no-repeat;
+}
