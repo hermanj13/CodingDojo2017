@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 90%;
+    display: flex;
+    margin: 10px auto;
+    justify-content: space-around;
+}
+
+#pokeManHolder {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pokeimgholder {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.pokeimg {
+    display: flex;
+    margin: 30px 30px 50px 30px;
+}
+
+#pokeInfo {
+    width: 15%;
+}

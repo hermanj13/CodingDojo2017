@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>pokeMan</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            for (let i = 1; i <= 151; i++) {
+                $('#pokeManHolder').append(
+                    `<div class="pokeimgholder"><img class='pokeimg' id='${i}' src="http://pokeapi.co/media/img/${i}.png" alt=""></div>`
+                );
+            }
+
+            $(".pokeimg").click(function() {
+                $.get("http://pokeapi.co/api/v1/pokemon/" + $(this).attr('id'), function(res) {
+                    console.log(res);
+                    $("#pokeInfo").html("<h1>Name</h1>" + res.name + "<h1>Weight</h1>" + res.weight + "<h1>height</h1>" + res.height);
+                }, "json");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="pokeManHolder">
+
+        </div>
+        <div id="pokeInfo">
+
+        </div>
+    </div>
+</body>
+
+</html>
