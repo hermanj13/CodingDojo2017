@@ -15,19 +15,19 @@ for count in range(5,1000000):
 
 #Sum List
 a = [1, 2, 5, 10, 255, 3]
-sum = 0
+total = 0
 i = 0
 while i < len(a):
-    sum = sum + a[i]
+    total = total + a[i]
     i += 1
-print sum
+print total
 
 #Avg List
 a = [1, 2, 5, 10, 255, 3]
-sum = 0
+total = 0
 i = 0
 while i < len(a):
-    sum = sum + a[i]
+    total = total + a[i]
     i += 1
-avg = sum/len(a)
+avg = total/len(a)
 print avg

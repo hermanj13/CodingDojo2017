@@ -1,9 +1,9 @@
-str = "If monkeys like bananas, then I must be a monkey!"
-print str.find('monkey')
-print str.find('monkey', str.find('like')+1)
+str1 = "If monkeys like bananas, then I must be a monkey!"
+print str1.find('monkey')
+print str1.find('monkey', str1.find('like')+1)
 
 
-strnew = str.replace('monkey','alligator')
+strnew = str1.replace('monkey','alligator')
 print strnew
 
 x = [2,54,-2,7,12,98]
