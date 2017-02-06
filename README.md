@@ -4,10 +4,7 @@
 Covers full stack development including Webdev, Python, and Ruby
 # Webdev:
 ########################
- Html
- Css
- Javascript/jQuery
- API/Ajax
+Html, CSS, Javascript/jQuery, API/Ajax
 
 # Python:
 ########################
