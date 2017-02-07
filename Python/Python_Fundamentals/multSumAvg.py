@@ -23,11 +23,5 @@ while i < len(a):
 print total
 
 #Avg List
-a = [1, 2, 5, 10, 255, 3]
-total = 0
-i = 0
-while i < len(a):
-    total = total + a[i]
-    i += 1
 avg = total/len(a)
 print avg

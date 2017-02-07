@@ -16,6 +16,6 @@ for key, listt in users.iteritems():
     print key
     for elements in listt:
         x = 1
-        str = elements['first_name'] + " " + elements['last_name']
-        print counter, "-", str, "-", len(str) -1
+        str1 = elements['first_name'] + " " + elements['last_name']
+        print counter, "-", str1, "-", len(str1) -1
         counter += 1

@@ -9,12 +9,12 @@
 
 def draw_stars(arr):
     for i in range(0, len(arr)):
-        if(type (arr[i]) is str):
+        if(isinstance(arr[i],str)):
             mult = len(arr[i])
             y = mult * arr[i][:1]
             print y
             y = 0
-        elif(type (arr[i]) is int):
+        elif(isinstance(arr[i],int)):
             y = arr[i] * "*"
             print y
             y = 0
