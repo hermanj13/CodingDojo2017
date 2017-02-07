@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ninja Registration Form</title>
+</head>
+
+<body>
+    <h1>So you wanna be a ninja?</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td><label for="first_name">Ninja First Name: </label></td>
+                <td><input type="text" id="first_name" name="first_name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="last_name">Ninja Last Name: </label></td>
+                <td><input type="text" id="last_name" name="last_name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Ninja Email </label></td>
+                <td><input type="text" id="email" name="email"></td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Ninja Password </label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="pw_confirm">Ninja PW Confirm </label></td>
+                <td><input type="password" id="pw_confirm" name="pw_confirm"></td>
+            </tr>
+            <tr>
+                <td><label for="birthday">Ninja Birthday </label></td>
+                <td><input type="date" id="birthday" name="birthday"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="gender">
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Ninja</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Ninja</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Ninja</label>
+    </div>
+    <div class="description">
+        <p>
+            A short description about yourself being a ninja:
+        </p>
+        <textarea name="description"></textarea>
+    </div>
+    <div class="langage">
+        <label for="language">Favorite Ninja</label>
+        <select name="language" id="language">
+          <option value="javascript">*CLASSIFIED*</option>
+          <option value="apache">*CLASSIFIED*</option>
+          <option value="ruby">*CLASSIFIED*</option>
+      </select>
+    </div>
+    <input type="submit" value="Submit">
+<br />
+    <a href="../../">Back</a><br />
+</body>
+
+</html>

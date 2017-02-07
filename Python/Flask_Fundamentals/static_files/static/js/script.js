@@ -1,6 +1,6 @@
 $($(document).ready(function() {
 
-    $("p").click(function(event) {
+    $("p").click(function() {
         alert("this is looking goooood!");
     });
 
