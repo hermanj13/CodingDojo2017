@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Form Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>Submitted Info</h1>
+    <table>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                {{session['name']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email
+            </td>
+            <td>
+                {{session['email']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dojo Location
+            </td>
+            <td>
+                {{session['location']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Favorite Language
+            </td>
+            <td>
+                {{session['language']}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Comment
+            </td>
+            <td>
+                {{session['comment']}}
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
