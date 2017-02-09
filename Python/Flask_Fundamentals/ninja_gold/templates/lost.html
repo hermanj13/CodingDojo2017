@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LOSER!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="lost_wrapper">
+        <h1>YOU LOST!</h1>
+        <img src="{{ url_for('static', filename='img/lose.jpg') }}">
+        <h3>Would you like to play again?</h3>
+        <form action="/reset" method="post">
+            <input type="submit" id="button" value="Play Again!" />
+        </form>
+    </div>
+</body>
+
+</html>

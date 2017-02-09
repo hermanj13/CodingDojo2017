@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ninja Gold</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="index_wrapper">
+        <div id="your_gold">
+            <p>Your Gold:</p>
+            <div id="gold_amt">
+                {{session['total_gold']}}
+            </div>
+        </div>
+        <div id="boxes_holder">
+            <div class="boxes">
+                <h1>Farm</h1>
+                <h3>(earns 10-20 gold)</h3>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="action" value="farm" />
+                    <input type="submit" value="Find Gold!" />
+                </form>
+            </div>
+            <div class="boxes">
+                <h1>Cave</h1>
+                <h3>(earns 5-10 gold)</h3>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="action" value="cave" />
+                    <input type="submit" value="Find Gold!" />
+                </form>
+            </div>
+            <div class="boxes">
+                <h1>House</h1>
+                <h3>(earns 2-5 gold)</h3>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="action" value="house" />
+                    <input type="submit" value="Find Gold!" />
+                </form>
+            </div>
+            <div class="boxes">
+                <h1>Casino</h1>
+                <h3>(earns/takes 0-50 gold)</h3>
+                <form action="/process_money" name="action" method="post">
+                    <input type="hidden" name="action" value="casino" />
+                    <input type="submit" value="Find Gold!" />
+                </form>
+            </div>
+        </div>
+        <div id="activities">
+            {% for i in session['activities'] %}
+            <p>{{i}} </p>
+            {% endfor %}
+        </div>
+        <div id="reset">
+            <form action="/reset" method="post">
+                <input type="submit" value="RESET!" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

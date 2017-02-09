@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#lost_wrapper {
+    width: 40%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#index_wrapper {
+    margin: 0 auto;
+}
+
+#your_gold {
+    display: flex;
+    width: 300px;
+    margin: 15px;
+}
+
+#gold_amt {
+    text-align: center;
+    margin-left: 20px;
+    width: 50px;
+    outline: 1px solid black;
+}
+
+#boxes_holder {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.boxes {
+    height: 200px;
+    width: 250px;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.boxes form {
+    margin-top: 35px;
+}
+
+#activities {
+    width: 80%;
+    height: 150px;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+
+}
+#reset {
+    margin: 15px;
+}
