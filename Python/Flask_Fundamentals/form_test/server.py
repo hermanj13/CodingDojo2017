@@ -1,6 +1,12 @@
 from flask import Flask, render_template, request, redirect, session
+import re
 app = Flask(__name__)
 app.secret_key = 'actAFool'
+
+def email_valid(email):
+    if not re.match("^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$", email):
+        return False
+    return True
 
 @app.route('/')
 def index():
@@ -9,16 +15,33 @@ def index():
 @app.route('/users', methods=['POST'])
 def create_user():
     session.pop('error', None)
-    session['comment'] = request.form['comment']
-    if len(session['comment']) > 120:
-        session['error'] = "Excuse me... You're comment is just a little to long!"
-        session.pop('comment', None)
+    session['first_name'] = request.form['first_name'].strip()
+    if str.isalpha(str(session['first_name'])):
+        session['last_name'] = request.form['last_name'].strip()
+        if str.isalpha(str(session['last_name'])):
+            session['email'] = request.form['email'].strip()
+            if email_valid(str(session['email'])):
+                session['location'] = request.form['location']
+                session['language'] = request.form['language']
+                session['comment'] = request.form['comment']
+                if len(session['comment']) < 120:
+                    return redirect('/results')
+                else:
+                    session['error'] = "Excuse me... You're comment is just a little to long!"
+                    session.pop('comment', None)
+                    return redirect('/')
+            else:
+                session['error'] = "Excuse me... You're email is not correct!"
+                session.pop('email', None)
+                return redirect('/')
+        else:
+            session['error'] = "Excuse me... You're last name is not correct!"
+            session.pop('last_name', None)
+            return redirect('/')
+    else:
+        session['error'] = "Excuse me... You're first name is not correct!"
+        session.pop('first_name', None)
         return redirect('/')
-    session['name'] = request.form['name']
-    session['email'] = request.form['email']
-    session['location'] = request.form['location']
-    session['language'] = request.form['language']
-    return redirect('/results')
 
 @app.route('/results')
 def show_results():

@@ -1,3 +1,6 @@
+#error{
+  color: red;
+}
 textarea {
     width: 400px;
     height: 100px;

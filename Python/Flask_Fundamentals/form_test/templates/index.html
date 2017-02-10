@@ -9,13 +9,14 @@
 
 <body>
     <h3>Create a User</h3>
-    
+
     {%if session['error']%}
-    <h1>{{session['error']}}</h1>
+    <h1 id="error">{{session['error']}}</h1>
     {%endif%}
 
     <form action="/users" method="post">
-        <p>Name: <input type="text" name="name" required="True"> </p>
+        <p>First Name: <input type="text" name="first_name" required="True"> </p>
+        <p>Last Name: <input type="text" name="last_name" required="True"> </p>
         <p>Email: <input type="text" name="email" required="True"></p>
         <p>Dojo Location:
         <select name="location" required="True">
@@ -44,6 +45,9 @@
           <option value="JavaScript">JavaScript</option>
           <option value="SQL">SQL</option>
         </select></p>
+        <p>
+          Comments? (optional)
+        </p>
         <textarea name="comment"></textarea><br />
         <input type="submit" value="create user">
     </form>
