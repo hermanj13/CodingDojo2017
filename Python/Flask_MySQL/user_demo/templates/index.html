@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>User Data Demo</title>
+</head>
+<body>
+  <h1>Lets get some data!</h1>
+  <form action="/create" method="POST">
+    <p>First Name: <input type="text" name="first_name" /></p>
+    <p>Last Name: <input type="text" name="last_name" /></p>
+    <p>Age: <input type="text" name="age" /></p>
+    <p><input type="submit" value="create user"/></p>
+
+    <table>
+      <tr>
+        <th>
+          First Name
+        </th>
+        <th>
+          Last name
+        </th>
+        <th>
+          Age
+        </th>
+      </tr>
+      {%for user in users%}
+      <tr>
+        <td>
+          {{user['first_name']}}
+        </td>
+        <td>
+          {{user['last_name']}}
+        </td>
+        <td>
+          {{user['age']}}
+        </td>
+      </tr>
+      {%endfor%}
+    </table>
+  </form>
+</body>
+</html>
