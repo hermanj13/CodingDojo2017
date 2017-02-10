@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h3>Create a User</h3>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <h3 id="error">{{message}}</h3>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form action="/users" method="post">
+      <table>
+          <tr>
+            <td>
+              First Name:
+            </td>
+            <td>
+              <input type="text" name="first_name" required="True">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Last Name:
+            </td>
+            <td>
+              <input type="text" name="last_name" required="True">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Email:
+            </td>
+            <td>
+              <input type="text" name="email" required="True">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Password:
+            </td>
+            <td>
+              <input type="password" name="pw" required="True">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Confirm Password:
+            </td>
+            <td>
+              <input type="password" name="pw_confirm" required="True">
+            </td>
+          </tr>
+        </table>
+        <input type="submit" value="create user">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Registration Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1>Submitted Info</h1>
+    <table>
+        <tr>
+            <td>
+                First Name:
+            </td>
+            <td>
+                {{ first_name }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name:
+            </td>
+            <td>
+                {{ last_name }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email:
+            </td>
+            <td>
+                {{ email }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                {{ password }}
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

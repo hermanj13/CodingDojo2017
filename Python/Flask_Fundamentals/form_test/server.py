@@ -27,19 +27,19 @@ def create_user():
                 if len(session['comment']) < 120:
                     return redirect('/results')
                 else:
-                    session['error'] = "Excuse me... You're comment is just a little to long!"
+                    session['error'] = "Excuse me... Your comment is just a little to long!"
                     session.pop('comment', None)
                     return redirect('/')
             else:
-                session['error'] = "Excuse me... You're email is not correct!"
+                session['error'] = "Excuse me... Your email is not correct!"
                 session.pop('email', None)
                 return redirect('/')
         else:
-            session['error'] = "Excuse me... You're last name is not correct!"
+            session['error'] = "Excuse me... Your last name is not correct!"
             session.pop('last_name', None)
             return redirect('/')
     else:
-        session['error'] = "Excuse me... You're first name is not correct!"
+        session['error'] = "Excuse me... Your first name is not correct!"
         session.pop('first_name', None)
         return redirect('/')
 
