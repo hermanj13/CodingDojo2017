@@ -9,11 +9,17 @@
 
 <body>
     <h3>Create a User</h3>
+    
+    {%if session['error']%}
+    <h1>{{session['error']}}</h1>
+    {%endif%}
+
     <form action="/users" method="post">
-        <p>Name: <input type="text" name="name"> </p>
-        <p>Email: <input type="text" name="email"></p>
+        <p>Name: <input type="text" name="name" required="True"> </p>
+        <p>Email: <input type="text" name="email" required="True"></p>
         <p>Dojo Location:
-        <select name="location">
+        <select name="location" required="True">
+          <option value="" style="display:none;"></option>
           <option value="San Jose">San Jose, CA</option>
           <option value="Seattle, WA">Seattle, WA</option>
           <option value="Los Angeles, CA">Los Angeles, CA</option>
@@ -25,7 +31,8 @@
         </select></p>
         <p>
         Favorite Language:
-        <select name="language">
+        <select name="language" required="True">
+          <option value="" style="display:none;"></option>
           <option value="Java">Java</option>
           <option value="C">C</option>
           <option value="C++">C++</option>
