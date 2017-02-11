@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% if type == "blue" %}
+        Leaondardo
+      {% elif type == "orange" %}
+        Michelangelo
+      {% elif type == "red" %}
+        Raphael
+      {% elif type == "purple" %}
+        Donatello
+      {% else %}
+        Who???
+      {% endif %}
+    </title>
+  </head>
+  <body>
+      {% if type == "blue" %}
+        <img src="{{ url_for('static', filename='img/leonardo.jpg') }}">
+      {% elif type == "orange" %}
+        <img src="{{ url_for('static', filename='img/michelangelo.jpg') }}">
+      {% elif type == "red" %}
+        <img src="{{ url_for('static', filename='img/raphael.jpg') }}">
+      {% elif type == "purple" %}
+        <img src="{{ url_for('static', filename='img/donatello.jpg') }}">
+      {% else %}
+        <img src="{{ url_for('static', filename='img/notapril.jpg') }}">
+      {% endif %}
+  </body>
+</html>

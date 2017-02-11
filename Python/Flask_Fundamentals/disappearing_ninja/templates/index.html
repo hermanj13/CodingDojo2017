@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Disappearing Ninja</title>
+</head>
+
+<body>
+    {% if route == "index" %}
+      <h1>No Ninjas Here</h1>
+    {% elif route == "ninjas" %}
+      <img src="{{ url_for('static', filename='img/tmnt.png') }}">
+    {% endif %}
+</body>
+
+</html>
