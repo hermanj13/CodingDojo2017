@@ -9,18 +9,18 @@ def index():
 def ninja():
     return render_template('index.html', route="ninjas")
 
-@app.route('/ninja/<type>')
-def turtle(type):
-    if type == "blue":
-        return render_template('theninjas.html', type=type)
-    elif type == "orange":
-        return render_template('theninjas.html', type=type)
-    elif type == "red":
-        return render_template('theninjas.html', type=type)
-    elif type == "purple":
-        return render_template('theninjas.html', type=type)
+@app.route('/ninja/<ninja_type>')
+def turtle(ninja_type):
+    if ninja_type == "blue":
+        return render_template('theninjas.html', ninja_type=ninja_type)
+    elif ninja_type == "orange":
+        return render_template('theninjas.html', ninja_type=ninja_type)
+    elif ninja_type == "red":
+        return render_template('theninjas.html', ninja_type=ninja_type)
+    elif ninja_type == "purple":
+        return render_template('theninjas.html', ninja_type=ninja_type)
     else:
-        return render_template('theninjas.html', type=type)
+        return render_template('theninjas.html', ninja_type=ninja_type)
 
 
 app.run(debug=True)
