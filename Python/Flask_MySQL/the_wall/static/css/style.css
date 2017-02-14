@@ -1,0 +1,59 @@
+#login {
+    margin: 0px auto;
+    width: 30%;
+    outline: 1px solid black;
+    text-align: center;
+    background: linear-gradient(135deg, #1e5799 0%,#2989d8 28%,#207cca 78%,#7db9e8 100%)
+}
+
+#login table {
+    margin: 0 auto;
+}
+
+#register {
+    margin: 0px auto;
+    width: 30%;
+    outline: 1px solid black;
+    text-align: center;
+    background: linear-gradient(135deg, #1e5799 0%,#2989d8 28%,#207cca 78%,#7db9e8 100%)
+}
+
+#register table {
+    margin: 0 auto;
+}
+
+#wallWrapper {
+    padding: 15px;
+    width: 70%;
+    margin: 0px auto;
+    background: linear-gradient(135deg, #1e5799 0%,#2989d8 28%,#207cca 78%,#7db9e8 100%)
+}
+#header{
+  background: linear-gradient(135deg, #e0f3fa 0%,#d8f0fc 31%,#b8e2f6 67%,#b6dffd 100%);
+  padding: 0px 0px 5px 15px;
+  margin-bottom: 20px;
+  outline: 1px solid black;
+}
+.message {
+    padding: 5px 0px 0px 15px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #e0f3fa 0%,#d8f0fc 31%,#b8e2f6 67%,#b6dffd 100%);
+    outline: 1px solid black;
+}
+
+.textbox {
+    width: 40%;
+    height: 75px;
+}
+
+.comment {
+    padding: 1px 0px 1px 20px;
+    margin-bottom: 15px;
+    width: 50%;
+    background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#05abe0 100%);
+    outline: 1px solid black;
+}
+
+.commentForm {
+    padding: 10px 0px 10px 15px;
+}

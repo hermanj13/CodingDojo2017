@@ -28,3 +28,4 @@ class MySQLConnection(object):
             self.db.session.commit()
 def MySQLConnector(app, db):
     return MySQLConnection(app, db)
+

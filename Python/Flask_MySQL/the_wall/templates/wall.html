@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>~The Wall~</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div id="wallWrapper">
+    <div id="header">
+    <h1>The Wall ~ Welcome back {{session['id'][0].first_name}}</h1>
+    <p>Post a message!</p>
+    <form action="/postmessage" method="POST">
+        <textarea name="message" required="True" class="textbox"></textarea>
+        <p><input type="submit" value="Post Message" /></p>
+    </form>
+    </div>
+  {% for message in messages %}
+    <div class="message">
+        <p>{{message.first_name}} {{message.last_name}} - {{message.created_at}}</p>
+        <p>{{message.message}}</p>
+            {% for comments in comment %}
+              {% if comments.id == message.id %}
+                <div class="comment">
+                  <p>{{comments.first_name}} {{comments.last_name}} - {{comments.created_at}}</p>
+                  <p>{{comments.comment}}</p>
+                </div>
+              {% endif %}
+            {% endfor %}
+            <form action="/postcomment" method="POST" class="commentForm">
+                <p>Post a message!</p>
+                <input type="text" hidden="true" name = "id" value = {{message.id}} />
+                <textarea name="comment" required="True" class="textbox"></textarea>
+                <p><input type="submit" value="Post Comment" /></p>
+            </form>
+    </div>
+  {% endfor %}
+  <a href="/logout">logout</a>
+  </div>
+</body>
+
+</html>
