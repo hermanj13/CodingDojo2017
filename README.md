@@ -1,23 +1,23 @@
 # CodingDojo2017
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ca2210bf938244e2aedf67fde5c8fd90)](https://www.codacy.com/app/hermanj13/CodingDojo2017?utm_source=github.com&utm_medium=referral&utm_content=hermanj13/CodingDojo2017&utm_campaign=badger)
 
-14 Week Coding Academy
+**14 Week Coding Academy at Coding Dojo**
 Covers full stack development including Webdev, Python, Ruby, and Mean
 
 # Webdev:
 
-*Html
-*CSS
-*Javascript/jQuery
-*APIs/Ajax
-*RWD
+* Html
+* CSS 2
+* Javascript/jQuery 3
+* APIs/Ajax 4
+* RWD 5
 
 # Python:
 
-*Flask
-*OOP
-*MySQL
-*Django
-*Pylot MVC
-*APIs/Ajax
-*Deployment
+* Flask
+* OOP
+* MySQL
+* Django
+* Pylot MVC
+* APIs/Ajax
+* Deployment
