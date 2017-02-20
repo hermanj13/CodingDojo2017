@@ -23,5 +23,6 @@ Covers full stack development including Webdev, Python, Ruby, and Mean
 * APIs/Ajax
 * Deployment
 
->> “Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter.”
->> -Eric S. Raymond
+> “Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter.”
+
+-Eric S. Raymond
