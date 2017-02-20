@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% if color == "blue" %}
+      Leaondardo
+    {% elif color == "orange" %}
+      Michelangelo
+    {% elif color == "red" %}
+      Raphael
+    {% elif color == "purple" %}
+      Donatello
+    {% else %}
+      Who???
+    {% endif %}</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    {% if color == "blue" %}
+      <img src="{% static 'disappearing_ninja/img/leonardo.jpg' %}">
+    {% elif color == "orange" %}
+      <img src="{% static 'disappearing_ninja/img/michelangelo.jpg' %}">
+    {% elif color == "red" %}
+      <img src="{% static 'disappearing_ninja/img/raphael.jpg' %}">
+    {% elif color == "purple" %}
+      <img src="{% static 'disappearing_ninja/img/donatello.jpg' %}">
+    {% else %}
+      <img src="{% static 'disappearing_ninja/img/notapril.jpg' %}">
+    {% endif %}
+  </body>
+</html>

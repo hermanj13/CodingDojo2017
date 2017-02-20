@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Ninja</title>
+    {% load staticfiles %}
+  </head>
+  <body>
+    {% if route == "index" %}
+      <h1>No Ninjas Here</h1>
+    {% elif route == "ninjas" %}
+      <img src="{% static 'disappearing_ninja/img/tmnt.png' %}">
+    {% endif %}
+  </body>
+</html>

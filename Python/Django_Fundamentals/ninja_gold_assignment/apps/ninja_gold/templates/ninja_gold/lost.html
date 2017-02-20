@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SORRY LOSER!</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'ninja_gold/css/styles.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+
+<body>
+    <div id="lost_wrapper">
+        <h1>YOU LOST!</h1>
+        <img src="{% static '/ninja_gold/imgs/lose.jpg' %}">
+        <h3>Would you like to play again?</h3>
+        <form action="/reset" method="post">
+            {% csrf_token %}
+            <input type="submit" id="button" value="Play Again!" />
+        </form>
+    </div>
+</body>
+
+</html>
