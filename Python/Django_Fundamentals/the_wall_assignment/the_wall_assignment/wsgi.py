@@ -1,5 +1,5 @@
 """
-WSGI config for enemy_list_assignment project.
+WSGI config for the_wall_assignment project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "enemy_list_assignment.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "the_wall_assignment.settings")
 
 application = get_wsgi_application()
