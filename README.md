@@ -8,10 +8,10 @@ Covers full stack development including Webdev, Python, Ruby, and Mean
 # Webdev:
 
 * Html
-* CSS 2
-* Javascript/jQuery 3
-* APIs/Ajax 4
-* RWD 5
+* CSS
+* Javascript/jQuery
+* APIs/Ajax
+* RWD
 
 # Python:
 
