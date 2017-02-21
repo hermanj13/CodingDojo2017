@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sports Leagues</title>
+	</head>
+	<body>
+		<h1>Baseball</h1>
+		<ol>
+			{% for leauges in baseball %}
+				<li>{{leauges.name}}</li>
+			{% empty %}
+				<p>No leauges found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Womens' Leagues</h1>
+		<ol>
+			{% for leauges in women %}
+				<li>{{leauges.name}}</li>
+			{% empty %}
+				<p>No leauges found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Hockey Leagues</h1>
+		<ol>
+			{% for leauges in hockey %}
+				<li>{{leauges.name}}</li>
+			{% empty %}
+				<p>No leauges found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Non-Football Leagues</h1>
+		<ol>
+			{% for leauges in notfootball %}
+				<li>{{leauges.name}}</li>
+			{% empty %}
+				<p>No leauges found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>"Conferences" Leagues</h1>
+		<ol>
+			{% for leauges in conferences %}
+				<li>{{leauges.name}}</li>
+			{% empty %}
+				<p>No leauges found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Atlantic Leagues</h1>
+		<ol>
+			{% for leauges in atlantic %}
+				<li>{{leauges.name}}</li>
+			{% empty %}
+				<p>No leauges found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Dallas Teams</h1>
+		<ol>
+			{% for teams in dallas %}
+				<li>{{teams.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Raptors Teams</h1>
+		<ol>
+			{% for teams in raptors %}
+				<li>{{teams.location}} {{teams.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>City Teams</h1>
+		<ol>
+			{% for teams in contain_city %}
+				<li>{{teams.location}} {{teams.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>"T" Teams</h1>
+		<ol>
+			{% for teams in t_teams %}
+				<li>{{teams.location}} {{teams.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Alphabetical Teams by Location</h1>
+		<ol>
+			{% for teams in alphabetical_location %}
+				<li>{{teams.location}} {{teams.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Reverse Alphabetical by Teams</h1>
+		<ol>
+			{% for teams in reverse_teams %}
+				<li>{{teams.location}} {{teams.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Players named Cooper</h1>
+		<ol>
+			{% for player in coopers %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No Players found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Players named Joshua</h1>
+		<ol>
+			{% for player in joshua %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No Players found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Players named Cooper and not Joshua</h1>
+		<ol>
+			{% for player in coopers_no_joshua %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No Players found.</p>
+			{% endfor %}
+		</ol>
+
+		<h1>Players named Alexander or Wyatt</h1>
+		<ol>
+			{% for player in alex_or_wyatt %}
+				<li>{{player.first_name}} {{player.last_name}}</li>
+			{% empty %}
+				<p>No Players found.</p>
+			{% endfor %}
+		</ol>
+	</body>
+</html>
