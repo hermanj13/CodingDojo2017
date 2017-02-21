@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Let's Make Friends!!</title>
+    <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin-top: 5px;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+</head>
+
+<body>
+    <h1>Let's Make Some Enemies!</h1>
+
+    <form action="/add_person" method="post">
+        {% csrf_token %} Name: <input type="text" name='new_person'>
+        <input type="submit" value='Add Person'>
+    </form>
+
+    <table class="tg">
+      <tr>
+        <th class="tg-9hbo">Enemies 1</th>
+        <th class="tg-9hbo">Enemies 2</th>
+      </tr>
+
+    {% for friendship in friendships%}
+      <tr>
+        <td class="tg-yw4l">{{friendship.friend1.name}}</td>
+        <td class="tg-yw4l">{{friendship.friend2.name}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+
+    <form action="/create_friendship" method="post">
+        {% csrf_token %}
+        <p>Enemies 1: <select name='friend1'>
+            {% for person in people %}
+            <option value='{{person.id}}'>{{person.name}}</option>
+            {% endfor %}
+        </select>
+
+        Enemies 2: <select name='friend2'>
+            {% for person in people %}
+            <option value='{{person.id}}'>{{person.name}}</option>
+            {% endfor %}
+        </select></p>
+
+        <input type="submit" value='Create Enemies'>
+    </form>
+</body>
+
+</html>
