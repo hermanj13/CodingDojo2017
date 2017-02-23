@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login & Reg | Success</title>
+  </head>
+  <body>
+    <h1>Success! Welcome, {{request.session.name}}</h1>
+    {% if messages %}
+    {% for message in messages%}
+      <h3>{{message}}</h3>
+    {% endfor %}
+    {% endif %}
+    <a href="/reset">Log Out</a>
+  </body>
+</html>
