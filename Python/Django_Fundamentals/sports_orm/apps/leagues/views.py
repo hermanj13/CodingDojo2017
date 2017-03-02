@@ -20,7 +20,15 @@ def index(request):
 		"coopers": Player.objects.filter(last_name="Cooper"),
 		"joshua": Player.objects.filter(first_name="Joshua"),
 		"coopers_no_joshua": Player.objects.filter(last_name="Cooper").exclude(first_name="Joshua"),
-		"alex_or_wyatt": Player.objects.filter(first_name="Alexander")|Player.objects.filter(first_name="Wyatt")
+		"alex_or_wyatt": Player.objects.filter(first_name="Alexander")|Player.objects.filter(first_name="Wyatt"),
+		"asc": Team.objects.filter(league__name="Atlantic Soccer Conference"),
+		"currpengs": Player.objects.filter(curr_team__team_name="Penguins"),
+		"icbc": Player.objects.filter(curr_team__league__name="International Collegiate Baseball Conference"),
+		"acoaf": Player.objects.filter(curr_team__league__name="American Conference of Amateur Football").filter(last_name="Lopez"),
+		"football_players": Player.objects.filter(curr_team__league__sport="Football"),
+		"sophia_team": Team.objects.filter(curr_players__first_name="Sophia"),
+		"sophia_league": League.objects.filter(teams__curr_players__first_name="Sophia"),
+		"flores": Player.objects.filter(last_name="Flores").exclude(curr_team__team_name="Roughriders")
 	}
 	return render(request, "leagues/index.html", context)
 

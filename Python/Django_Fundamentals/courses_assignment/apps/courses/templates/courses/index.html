@@ -5,7 +5,7 @@
 </head>
 <body>
 <h2>Course</h2>
-<form action="/add_course" method="POST">
+<form action="{% url 'courses:add_course' %}" method="POST">
 {% csrf_token %}
 	<p>Name of Course: <input type="text" name="name" required="True"></p>
 	<p>Description of Course: </p>
@@ -24,11 +24,10 @@
 		<td>{{result.course.name}}</td>
 		<td>{{result.description}}</td>
 		<td>{{result.course.created_at}}</td>
-		<td><a href="/delete/{{result.course.id}}"> Remove</a></td>
-		<td><a href="/comment/{{result.course.id}}"> Comment</a></td>
+		<td><a href="{% url 'courses:delete' id=result.course.id %}"> Remove</a></td>
+		<td><a href="{% url 'courses:comment' id=result.course.id %}"> Comment</a></td>
 	</tr>
 	{% endfor %}
 </table>
-
 </body>
 </html>

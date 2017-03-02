@@ -5,8 +5,7 @@
 </head>
 <body>
 <h1>Comments:</h1>
-
-<form action="/add_comment/{{course.id}}" method="POST">
+<form action="{% url 'courses:add_comment' id=course.id %}" method="POST">
 {% csrf_token %}
 <p><textarea name="comment" cols="50" rows="10"></textarea></p>
 <p><input type="submit" value="Add comment"></p>

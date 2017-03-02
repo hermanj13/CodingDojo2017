@@ -4,7 +4,8 @@
 		<title>Sports Leagues</title>
 	</head>
 	<body>
-		<h1>Baseball</h1>
+		<h1>Part 1</h1>
+		<h3>Baseball</h3>
 		<ol>
 			{% for leauges in baseball %}
 				<li>{{leauges.name}}</li>
@@ -13,7 +14,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Womens' Leagues</h1>
+		<h3>Womens' Leagues</h3>
 		<ol>
 			{% for leauges in women %}
 				<li>{{leauges.name}}</li>
@@ -22,7 +23,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Hockey Leagues</h1>
+		<h3>Hockey Leagues</h3>
 		<ol>
 			{% for leauges in hockey %}
 				<li>{{leauges.name}}</li>
@@ -31,7 +32,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Non-Football Leagues</h1>
+		<h3>Non-Football Leagues</h3>
 		<ol>
 			{% for leauges in notfootball %}
 				<li>{{leauges.name}}</li>
@@ -40,7 +41,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>"Conferences" Leagues</h1>
+		<h3>"Conferences" Leagues</h3>
 		<ol>
 			{% for leauges in conferences %}
 				<li>{{leauges.name}}</li>
@@ -49,7 +50,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Atlantic Leagues</h1>
+		<h3>Atlantic Leagues</h3>
 		<ol>
 			{% for leauges in atlantic %}
 				<li>{{leauges.name}}</li>
@@ -58,7 +59,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Dallas Teams</h1>
+		<h3>Dallas Teams</h3>
 		<ol>
 			{% for teams in dallas %}
 				<li>{{teams.team_name}}</li>
@@ -67,7 +68,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Raptors Teams</h1>
+		<h3>Raptors Teams</h3>
 		<ol>
 			{% for teams in raptors %}
 				<li>{{teams.location}} {{teams.team_name}}</li>
@@ -76,7 +77,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>City Teams</h1>
+		<h3>City Teams</h3>
 		<ol>
 			{% for teams in contain_city %}
 				<li>{{teams.location}} {{teams.team_name}}</li>
@@ -85,7 +86,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>"T" Teams</h1>
+		<h3>"T" Teams</h3>
 		<ol>
 			{% for teams in t_teams %}
 				<li>{{teams.location}} {{teams.team_name}}</li>
@@ -94,7 +95,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Alphabetical Teams by Location</h1>
+		<h3>Alphabetical Teams by Location</h3>
 		<ol>
 			{% for teams in alphabetical_location %}
 				<li>{{teams.location}} {{teams.team_name}}</li>
@@ -103,7 +104,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Reverse Alphabetical by Teams</h1>
+		<h3>Reverse Alphabetical by Teams</h3>
 		<ol>
 			{% for teams in reverse_teams %}
 				<li>{{teams.location}} {{teams.team_name}}</li>
@@ -112,7 +113,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Players named Cooper</h1>
+		<h3>Players named Cooper</h3>
 		<ol>
 			{% for player in coopers %}
 				<li>{{player.first_name}} {{player.last_name}}</li>
@@ -121,7 +122,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Players named Joshua</h1>
+		<h3>Players named Joshua</h3>
 		<ol>
 			{% for player in joshua %}
 				<li>{{player.first_name}} {{player.last_name}}</li>
@@ -130,7 +131,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Players named Cooper and not Joshua</h1>
+		<h3>Players named Cooper and not Joshua</h3>
 		<ol>
 			{% for player in coopers_no_joshua %}
 				<li>{{player.first_name}} {{player.last_name}}</li>
@@ -139,12 +140,87 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Players named Alexander or Wyatt</h1>
+		<h3>Players named Alexander or Wyatt</h3>
 		<ol>
 			{% for player in alex_or_wyatt %}
 				<li>{{player.first_name}} {{player.last_name}}</li>
 			{% empty %}
 				<p>No Players found.</p>
+			{% endfor %}
+		</ol>
+
+		<hr>
+		<h1>Part 2</h1>
+
+		<h3>Atlantic Soccer Conference</h3>
+		<ol>
+			{% for team in asc %}
+				<li>{{team.location}} {{team.team_name}}</li>
+			{% empty %}
+				<p>No Teams found.</p>
+			{% endfor %}
+		</ol>
+
+		<h3>Current Boston Penguins</h3>
+		<ol>
+			{% for players in currpengs %}
+				<li>{{players.first_name}} {{players.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
+			{% endfor %}
+		</ol>
+
+		<h3>Current Players in ICBC</h3>
+		<ol>
+			{% for players in icbc %}
+				<li>{{players.first_name}} {{players.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
+			{% endfor %}
+		</ol>
+
+		<h3>Lopez's in ACOAF</h3>
+		<ol>
+			{% for players in acoaf %}
+				<li>{{players.first_name}} {{players.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
+			{% endfor %}
+		</ol>
+
+		<h3>Football Players</h3>
+		<ol>
+			{% for players in football_players %}
+				<li>{{players.first_name}} {{players.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
+			{% endfor %}
+		</ol>
+
+		<h3>Teams with a "Sophia"</h3>
+		<ol>
+			{% for teams in sophia_team %}
+				<li>{{teams.location}} {{teams.team_name}}</li>
+			{% empty %}
+				<p>No teams found.</p>
+			{% endfor %}
+		</ol>
+
+		<h3>Leagues with a "Sophia"</h3>
+		<ol>
+			{% for leagues in sophia_league %}
+				<li>{{leagues.name}}</li>
+			{% empty %}
+				<p>No leagues found.</p>
+			{% endfor %}
+		</ol>
+
+		<h3>Players names "Flores" not on Washington Roughriders</h3>
+		<ol>
+			{% for players in flores %}
+				<li>{{players.first_name}} {{players.last_name}}</li>
+			{% empty %}
+				<p>No players found.</p>
 			{% endfor %}
 		</ol>
 	</body>

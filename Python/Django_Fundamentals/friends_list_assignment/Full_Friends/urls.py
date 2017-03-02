@@ -18,5 +18,5 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
-    url(r'^', include('apps.Make_Friends.urls'))
+    url(r'^', include('apps.Make_Friends.urls', namespace='makefriends'))
 ]

@@ -11,6 +11,6 @@
       <h3>{{message}}</h3>
     {% endfor %}
     {% endif %}
-    <a href="/reset">Log Out</a>
+    <a href="{% url 'login:reset' %}">Log Out</a>
   </body>
 </html>

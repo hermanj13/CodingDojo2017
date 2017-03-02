@@ -14,12 +14,12 @@
 .tg .tg-yw4l{vertical-align:top}
 </style>
 </head>
-
 <body>
     <h1>Let's Make Some Enemies!</h1>
 
-    <form action="/add_person" method="post">
-        {% csrf_token %} Name: <input type="text" name='new_person'>
+    <form action="{% url 'makefriends:add_person' %}" method="post">
+        {% csrf_token %}
+        Name: <input type="text" name='new_person'>
         <input type="submit" value='Add Person'>
     </form>
 
@@ -38,7 +38,7 @@
     </table>
 
 
-    <form action="/create_friendship" method="post">
+    <form action="{% url 'makefriends:create_friendship' %}" method="post">
         {% csrf_token %}
         <p>Enemies 1: <select name='friend1'>
             {% for person in people %}
