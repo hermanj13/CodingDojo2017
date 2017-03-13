@@ -1,0 +1,18 @@
+<% for user in @user%>
+<form action="/users/update" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <p>First Name:
+        <input type="text" name="first" value="<%= user.first%>"/>
+    </p>
+    <p>Last Name:
+        <input type="text" name="last" value="<%= user.last%>"/>
+    </p>
+    <p>Age:
+        <input type="text" name="age" value="<%= user.age%>"/>
+    </p>
+    <input type="hidden" name="id" value="<%= user.id%>">
+    <p>
+        <input type="submit" value="Update User"/>
+    </p>
+</form>
+<%end%>

@@ -1,3 +1,6 @@
+**START SERVER**
+rails s -b 0.0.0.0
+
 **USEFUL GEMS**
 gem 'hirb'
 gem 'rails-footnotes'
