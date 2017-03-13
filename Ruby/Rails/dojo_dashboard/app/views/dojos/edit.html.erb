@@ -1,0 +1,17 @@
+<% if flash[:error] %>
+  <%flash[:error].each do |error| %>
+    <h3><%= error %></h3>
+  <%end%>
+<% end %>
+
+<form action="/dojos/<%= @dojo.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p><input type="text" name="dojo[branch]" value="<%= @dojo.branch%>"/></p>
+  <p><input type="text" name="dojo[street]" value="<%= @dojo.street%>"/></p>
+  <p><input type="text" name="dojo[city]" value="<%= @dojo.city%>"/></p>
+  <p><input type="text" name="dojo[state]" value="<%= @dojo.state%>"/></p>
+  <p><input type="submit" value="Update" /></p>
+</form>
+
+<a href="/dojos">Home</a>|<a href="/dojos/<%= @dojo.id %>">Show</a>
