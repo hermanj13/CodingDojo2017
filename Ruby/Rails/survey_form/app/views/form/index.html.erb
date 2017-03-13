@@ -1,0 +1,40 @@
+<form action="/create" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <p>Name:
+        <input type="text" name="user[name]" required="True">
+    </p>
+    <p>Dojo Location:
+        <select name="user[location]" required="True">
+            <option value="" style="display:none;"></option>
+            <option value="San Jose">San Jose, CA</option>
+            <option value="Seattle, WA">Seattle, WA</option>
+            <option value="Los Angeles, CA">Los Angeles, CA</option>
+            <option value="Dallas, TX">Dallas, TX</option>
+            <option value="Washington D.C.">Washington D.C.</option>
+            <option value="Chicago, IL">Chicago, IL</option>
+            <option value="Berkeley, CA">Berkeley, CA</option>
+            <option value="Orange County, CA">Orange County, CA</option>
+        </select>
+    </p>
+    <p>
+        Favorite Language:
+        <select name="user[language]" required="True">
+            <option value="" style="display:none;"></option>
+            <option value="Java">Java</option>
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="C#">C#</option>
+            <option value="Objective-C">Objective-C</option>
+            <option value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="Ruby">Ruby</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="SQL">SQL</option>
+        </select>
+    </p>
+    <p>
+        Comments? (optional)
+    </p>
+    <textarea name="user[comment]"></textarea><br/>
+    <input type="submit" value="submit">
+</form>
