@@ -26,6 +26,12 @@ rails g controller <ControllerName> <methods space separated>
 **RAILS AUTHENTICITY TOKEN**
 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
+**RAILS PATCH METHOD**
+<input type="hidden" name="_method" value="patch">
+
+**RAILS DELETE METHOD**
+<a href=“#<%= #.id %>" data-method="delete">Delete!</a>
+
 **SIMPLIFY CONSOLE LOGS**
     GO TO config/environments/development.rb
     ADD LINE config.log_level = :warn
