@@ -1,0 +1,25 @@
+<h1>Editing <%= @student.first_name %> <%= @student.last_name %></h1>
+
+<% if flash[:error] %>
+  <%flash[:error].each do |error| %>
+    <h3><%= error %></h3>
+  <%end%>
+<% end %>
+
+<form action="/dojos/<%= params[:dojo_id] %>/students/<%= params[:id]%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>First Name:<input type="text" name="student[first_name]" Value="<%= @student.first_name %>"/></p>
+  <p>Last Name: <input type="text" name="student[last_name]" Value="<%= @student.last_name %>"/></p>
+  <p>Email: <input type="text" name="student[email]" Value="<%= @student.email %>"/></p>
+  <p>Dojo Location:
+  <select name="student[dojo_id]" required="True">
+    <option value="<%= @this.id %>"><%= @this.branch %></option>
+    <%@dojos.each do |dojo|%>
+    <option value="<%= dojo.id %>"><%= dojo.branch %></option>
+    <%end%>
+  </select></p>
+  <p><input type="submit" value="Update" /></p>
+</form>
+
+<a href="/dojos">Home</a>|<a href="/dojos/<%= @this.id %>"><%= @this.branch %></a>|<a href="/dojos/<%= @this.id %>/students/<%= params[:id]%>"><%= @student.first_name %></a>

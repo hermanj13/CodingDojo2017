@@ -1,5 +1,25 @@
-<h1><%= @dojo.branch %></h1>
+<h1><%= @dojo.branch %></h1> <a href="/dojos/<%= @dojo.id %>/edit">Edit</a>
 <h3>Address: <%= @dojo.street %></h3>
 <h3>City: <%= @dojo.city %> State: <%= @dojo.state %></h3>
 
-<a href="/dojos">Home</a>|<a href="/dojos/<%= @dojo.id %>/edit">Edit</a>
+<%if @students%>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+  <%@students.each do |student|%>
+    <tr>
+      <td><%= student.first_name %></td>
+      <td><%= student.last_name %></td>
+      <td><%= student.email %></td>
+      <td><a href="/dojos/<%= @dojo.id %>/students/<%= student.id%>">Show</a>|<a href="/dojos/<%= @dojo.id %>/students/<%= student.id%>/edit">Edit</a>|<a href="/dojos/<%= @dojo.id %>/students/<%= student.id%>" data-method="delete">Delete</a></td>
+    </tr>
+  <%end%>
+</table>
+<%end%>
+
+
+<a href="/dojos">Home</a>|<a href="/dojos/<%= @dojo.id %>/students/new">Add Student</a>

@@ -17,27 +17,27 @@ class DojosController < ApplicationController
   end
 
   def show
-    @dojo = Dojo.find(params[:id])
-    puts @dojo
+    @dojo = Dojo.find(params[:dojo_id])
+    @students = Student.where('dojo_id = ?', params[:dojo_id])
   end
 
   def edit
-    @dojo = Dojo.find(params[:id])
+    @dojo = Dojo.find(params[:dojo_id])
   end
 
   def update
-    dojo = Dojo.find(params[:id])
+    dojo = Dojo.find(params[:dojo_id])
     dojo.update(dojo_params)
     if dojo.valid?
       redirect_to('/dojos/')
     else
       flash[:error] = dojo.errors.full_messages
-      redirect_to ('/dojos/' + params[:id] + '/edit')
+      redirect_to ('/dojos/' + params[:dojo_id] + '/edit')
     end
   end
 
   def destroy
-    dojo = Dojo.find(params[:id])
+    dojo = Dojo.find(params[:dojo_id])
     dojo.delete
     redirect_to('/dojos')
   end

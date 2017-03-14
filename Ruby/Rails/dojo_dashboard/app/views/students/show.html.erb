@@ -1,0 +1,22 @@
+<h1><%= @dojo.branch %>'s <%=@student.first_name%> <%=@student.last_name%></h1>
+
+<h3>Email: <%=@student.email%></h3>
+
+<%if @others%>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </tr>
+  <%@others.each do |other|%>
+    <tr>
+      <td><%= other.first_name %></td>
+      <td><%= other.last_name %></td>
+      <td><%= other.email %></td>
+    </tr>
+  <%end%>
+</table>
+<%end%>
+
+<a href="/dojos">Home</a>|<a href="/dojos/<%= @dojo.id %>/students/<%= @student.id %>/edit">Edit</a>|<a href="/dojos/<%= @dojo.id %>"><%= @dojo.branch %></a>
