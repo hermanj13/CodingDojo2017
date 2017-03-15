@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Stringer::VERSION
   spec.authors       = ["Jake Herman"]
   spec.email         = ["no@dontEvenThinkAboutIt.com"]
-
   spec.summary       = 'This is simple gem that will help us extend the functionality of strings'
-  spec.homepage      = "TODO: we will fill this out later"
+  spec.homepage      = "https://github.com/hermanj13/CodingDojo2017"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
