@@ -1,0 +1,23 @@
+<h1>CodingDojo Wall</h1>
+<h1>Welcome <%= session[:user]['username']%></h1>
+
+<%if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+
+<form action="/messages/create" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="message" id="message" />
+  <input type="submit" value="Post a Message" />
+</form>
+
+
+<% if @messages %>
+  <% @messages.each do |message| %>
+    <h3><%= message.message %> | <%= message.user.username %></h3>
+  <% end %>
+<% end %>
+
+<a href="/users/logout" id="Log Out">Log Out</a>
