@@ -16,12 +16,6 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-def log_in email: "test@test.com", password: "test1234"
-  visit '/sessions/new' unless current_path == "/sessions/new"
-  fill_in 'Email', with: email
-  fill_in 'Password', with: password
-  click_button 'Log In'
-end
 # The code below should already be included in your file
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -111,4 +105,19 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+end
+def log_in email: "test@test.com", password: "test1234"
+  visit '/sessions/new' unless current_path == "/sessions/new"
+  fill_in 'Email', with: email
+  fill_in 'Password', with: password
+  click_button 'Log In'
+end
+
+def register name: 'Jake', email: "test@test.com", password: "test1234", password_confirmation:"test1234"
+  visit '/users/new'
+  fill_in 'Email', with: email
+  fill_in 'Name', with: name
+  fill_in 'Password', with: password
+  fill_in 'Password Confirmation', with: password_confirmation
+  click_button 'Join'
 end
