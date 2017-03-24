@@ -1,0 +1,9 @@
+<h1>Edit <%= @event.name %></h1>
+<form action="/events/<%= @event.id %>" method="post">
+<input type="hidden" name="_method" value="patch">
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<p>Name: <input type="text" name="name" value="<%= @event.name %>"/></p>
+<p>City: <input type="text" name="city" value="<%= @event.city %>"/></p>
+<p>Date: <input type="date" name="date" value="<%= @event.date %>"/></p>
+<input type="submit" value="update" />
+</form>

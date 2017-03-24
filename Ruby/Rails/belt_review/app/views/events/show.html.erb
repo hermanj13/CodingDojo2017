@@ -1,0 +1,46 @@
+<h1><%= @event.name %></h1>
+<h3>Host: <%= @event.user.first%> <%= @event.user.last%></h3>
+<h3>Date: <%= @event.date.strftime("%b %e, %Y") %></h3>
+<h3>Location: <%= @event.city %>, <%= @event.state %></h3>
+<h3>Peaople who are joing the event: <%= @going.count %></h3>
+
+<% if @going.exists? %>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>State</th>
+    </tr>
+    <% @going.each do |user| %>
+      <tr>
+        <td><%= user.user.first %> <%= user.user.last %></td>
+        <td><%= user.user.city %></td>
+        <td><%= user.user.state %></td>
+      </tr>
+    <%end%>
+  </table>
+<%else%>
+  <h4>No one has joined this event</h4>
+<%end%>
+
+<h3>Discussion about this event</h3>
+
+<% if @messages.exists? %>
+  <%@messages.each do |message|%>
+  <p><%= message.user.first %> says: <%= message.message%> </p>
+  <hr />
+  <%end%>
+<% else %>
+  <p>
+    No Messages Yet!
+  </p>
+<% end %>
+<form action="/events/<%= @event.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <textarea rows="5" cols="70" name="message"> </textarea>
+  <p><input type="submit" value="Submit Comments" /></p>
+</form>
+
+<%if @event.user_id == current_user.id %>
+<a href="/events/<%= @event.id %>/edit">Edit</a>
+<% end %>

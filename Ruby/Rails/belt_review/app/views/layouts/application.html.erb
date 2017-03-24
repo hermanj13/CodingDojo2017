@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BeltReview</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if current_user %>
+      <a href="/events" >Home</a>
+      <a href="/user/<%= current_user.id%>" >Edit My Profile</a>
+      <a href="/sessions/logout" data-method="delete">Log Out</a>
+  <% end %>
+  <% if flash[:notice] %>
+  <% flash[:notice].each do |notice| %>
+    <h4><%= notice %></h4>
+  <% end %>
+<% end %>
+<%= yield %>
+</body>
+</html>

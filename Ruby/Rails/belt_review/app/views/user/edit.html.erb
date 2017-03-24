@@ -1,0 +1,11 @@
+<form action="/user/<%= current_user.id%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="patch">
+  <p>First Name: <input type="text" name="first" id="First" value="<%= current_user.first%>" /></p>
+  <p>Last Name: <input type="text" name="last" id="Last" value="<%= current_user.last%>"/></p>
+  <p>Email: <input type="text" name="email" id="Email" value="<%= current_user.email%>"/></p>
+  <p>Location: <input type="text" name="city" id="City" value="<%= current_user.city%>"/>
+  </p>
+
+  <input type="submit" value="Update" id="Update"/>
+</form>

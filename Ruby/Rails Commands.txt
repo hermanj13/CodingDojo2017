@@ -1,12 +1,25 @@
 **START SERVER**
 rails s -b 0.0.0.0
 
+**START PROJECT**
+rails new %project name% -T
+
 **USEFUL GEMS**
 gem 'hirb'
 gem 'rails-footnotes'
+gem 'rspec-rails'
+gem 'factory_girl_rails'
+gem 'capybara'
 
 ** GEMS INSTALL**
 bundle install
+
+**GENERATE RSPEC**
+rails generate rspec:install
+
+**RSPEC TESTING**
+GENERAL: rspec spec
+SPECIFIC: spec spec/<FOLDER>/<FILE>
 
 **USE RAILS FOOTNOTES**
 rails generate rails_footnotes:install
@@ -21,7 +34,6 @@ WRITE YOUR OWN ROUTE WITH:
 
 **GENERATE CONTROLLERS W/ RAILS**
 rails g controller <ControllerName> <methods space separated>
-
 
 **RAILS AUTHENTICITY TOKEN**
 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -39,3 +51,30 @@ rails g controller <ControllerName> <methods space separated>
 **SCAFFOLDING**
     Example
     rails g scaffold User first_name:string last_name:string email:string age:integer
+
+**MODEL DATA TYPES**
+:binary
+:boolean
+:date
+:datetime
+:decimal
+:float
+:integer
+:primary_key
+:references
+:string
+:text
+:time
+:timestamp
+
+**BCRYPT**
+*MODEL TYPE*
+password:digest
+*AUTHORIZE*
+%user%.authenticate(%password%)
+
+**FACTORY GIRL**
+*spec/rails_helper.rb*
+require 'factory_girl_rails'
+RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
