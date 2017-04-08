@@ -11,6 +11,12 @@ gem 'rspec-rails'
 gem 'factory_girl_rails'
 gem 'capybara'
 
+**FACTORY GIRL**
+*spec/rails_helper.rb*
+require 'factory_girl_rails'
+RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
+
 ** GEMS INSTALL**
 bundle install
 
@@ -72,9 +78,3 @@ rails g controller <ControllerName> <methods space separated>
 password:digest
 *AUTHORIZE*
 %user%.authenticate(%password%)
-
-**FACTORY GIRL**
-*spec/rails_helper.rb*
-require 'factory_girl_rails'
-RSpec.configure do |config|
-  config.include FactoryGirl::Syntax::Methods
