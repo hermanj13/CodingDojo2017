@@ -28,7 +28,7 @@ Covers full stack development including Webdev, Python, Ruby, and Mean
 * TDD
 * Deployment
 
-#MEAN:
+# MEAN:
 * Javascript
 * OOP
 * Node.js
