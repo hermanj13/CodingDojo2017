@@ -20,4 +20,4 @@ done
 echo "Reason for Update"
 read message_variable
 git commit -m "$message_variable"
-git blue
+git push origin master
