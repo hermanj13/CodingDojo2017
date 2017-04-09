@@ -28,11 +28,21 @@ Covers full stack development including Webdev, Python, Ruby, and Mean
 * TDD
 * Deployment
 
+#MEAN:
+* Javascript
+* OOP
+* Node.js
+* Express
+* MongoDB
+* Angular.JS
+* Deployment
+
 # Algorithms:
 * Arrays
 * Strings and Associative Arrays
 * SLL
 * Stacks and Queues
+* Regression
 
 
 >"Develop success from failures. Discouragement and failure are two of the surest stepping stones to success"
