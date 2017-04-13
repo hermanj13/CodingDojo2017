@@ -98,13 +98,12 @@ function BST() {
                 height = temp;
             }
         }
-        console.log(temp)
         return height
     }
 }
 
 var green = new BST;
-green.add(8).add(11).add(100).add(5).add(7).add(8).add(42).add(13)
+green.add(8).add(13).add(42).add(17).add(19)
 console.log(green.height())
 // console.log(green.doesContain(5));
 // console.log(green.root.right.right.left.left.val)
