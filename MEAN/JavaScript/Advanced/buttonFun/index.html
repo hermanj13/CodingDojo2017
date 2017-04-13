@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Button Fun</title>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="button.js"></script>
+    <style>
+    #theButton{
+      height: 300px;
+      width: 95%
+    }
+    #wrapper{
+      text-align: center;
+    }
+    .button{
+      background-color: blue;
+    }
+    .button:hover{
+      background-color: green;
+    }
+    .button.click{
+      background-color: red;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+    <button id="theButton" class="button">This is The Button</button>
+    </div>
+  </body>
+</html>
