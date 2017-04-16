@@ -1,6 +1,6 @@
 {
-  "name": "%Project Name%",
-  "description": "%Project Description%",
+  "name": "Demo",
+  "description": "Quick Demo",
   "dependencies": {
     "body-parser": "^1.15.0",
     "ejs": "^2.4.1",

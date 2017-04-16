@@ -1,6 +1,6 @@
 {
-  "name": "%Project Name%",
-  "description": "%Project Description%",
+  "name": "penguinDashboard",
+  "description": "Penguin Dashboard with modularization",
   "dependencies": {
     "body-parser": "^1.15.0",
     "ejs": "^2.4.1",

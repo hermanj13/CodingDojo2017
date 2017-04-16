@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Penguin
+            <%= penguin[0].name %></title>
+    </head>
+    <body>
+        <h1>Name:
+            <%= penguin[0].name %>
+        </h1>
+        <h1>Age:
+            <%= penguin[0].age %>
+        </h1>
+        <h1>Height:
+            <%= penguin[0].height %>
+        </h1>
+        <button type="button" name="button">
+            <a href="/penguin/edit/<%= penguin[0].id %>">Edit</a>
+        </button>
+        <form class="" action="/penguin/destroy/<%= penguin[0].id %>" method="post">
+            <input type="submit" name="" value="Delete">
+        </form>
+    </body>
+</html>
