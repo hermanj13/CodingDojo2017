@@ -100,10 +100,56 @@ function BST() {
         }
         return height
     }
+
+    this.containsSum = function(sum) {
+        if (!this.root) {
+            return false;
+        }
+        var r = this.root;
+        if (r.val === sum && (!r.right && !r.left)) {
+            return true
+        } else if (!r.right && !r.left) {
+            return false
+        }
+        return this.sumH2(r, sum, r.val)
+    }
+
+    this.sumH = function(r, sum, tsum) {
+        if (!r.left && !r.right) {
+            return tsum
+        }
+        if (r.left) {
+            var x = this.sumH(r.left, sum, tsum + r.left.val)
+
+        }
+        if (r.right) {
+            var y = this.sumH(r.right, sum, tsum + r.right.val)
+        }
+        if (x === sum || x === true || y === sum || y === true) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    this.sumH2 = function(r, sum, tsum) {
+        if (!r.left && !r.right) {
+            return tsum === sum;
+        } else {
+            x = false
+            if (r.left) {
+                var x = this.sumH2(r.left, sum, tsum + r.left.val)
+            }
+            y = false
+            if (r.right) {
+                var y = this.sumH2(r.right, sum, tsum + r.right.val)
+            }
+            return x || y
+        }
+    }
 }
 
 var green = new BST;
-green.add(8).add(13).add(42).add(17).add(19)
-console.log(green.height())
-// console.log(green.doesContain(5));
-// console.log(green.root.right.right.left.left.val)
+green.add(19).add(4).add(9).add(12).add(100)
+console.log(green.containsSum(119))
+console.log(green.doesContain(9));

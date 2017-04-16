@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Penguin Dashboard</title>
+    </head>
+    <body>
+        <h1>Welcome to the show.</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Height</th>
+                <th>Actions</th>
+            </tr>
+            <% for ( i in penguins ){%>
+                <tr>
+                    <td><%= penguins[i].name %></td>
+                    <td><%= penguins[i].age %></td>
+                    <td><%= penguins[i].height %></td>
+                    <td>
+                        <p>
+                            <a href="/penguin/<%= penguins[i]._id %>">Show</a>
+                            |
+                            <a href="/penguin/edit/<%= penguins[i]._id %>">Edit</a>
+                        </p>
+                    </td>
+                </tr>
+            <% }%>
+        </table>
+        <a href="/penguin/new">New Penguin</a>
+    </body>
+</html>
