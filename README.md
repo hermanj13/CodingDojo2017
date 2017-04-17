@@ -43,7 +43,7 @@ Covers full stack development including Webdev, Python, Ruby, and Mean
 * SLL
 * Stacks and Queues
 * Regression
-
+* Sorts
 
 >"Develop success from failures. Discouragement and failure are two of the surest stepping stones to success"
 
