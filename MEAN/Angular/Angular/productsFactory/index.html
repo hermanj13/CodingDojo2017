@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="productsApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Products with a Factory</title>
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+    <script>
+    var myApp = angular.module('productsApp', []);
+    myApp.factory('productFactory', function(){
+      var products= [{name:'Keyboard', price: 149.99},{name:'Mouse', price: 59.99},{name:'Basketball', price: 21.99}];
+      var factory = {};
+      factory.getProducts = function(callback){
+        callback(products);
+      }
+      factory.addProduct = function(data){
+        products.push(data);
+        console.log(products)
+      }
+      factory.removeProduct = function(index){
+        products.splice(index,1)
+      }
+
+      return factory;
+    })
+
+    myApp.controller('prodcutsController', ['$scope', 'productFactory', function($scope, productFactory){
+      $scope.products = [];
+      productFactory.getProducts(function(data){
+        $scope.products = data;
+      });
+      $scope.createProduct = function(){
+        productFactory.addProduct($scope.newProduct)
+        $scope.newProduct = {}
+      }
+      $scope.deleteProduct = function(index){
+        productFactory.removeProduct(index)
+      }
+    }])
+    </script>
+  </head>
+  <body>
+    <div ng-controller='prodcutsController'>
+      <h1>New Product</h1>
+      <form>
+        <p>Product Name: <input type="text" ng-model='newProduct.name'></p>
+        <p>Product Price: $<input type="number" ng-model='newProduct.price'></p>
+        <input type="submit" value="Add Product" ng-click='createProduct()'>
+      </form>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+        <tr ng-repeat="product in products track by $index ">
+          <td>{{product.name}}</td>
+          <td>${{product.price}}</td>
+          <td><button ng-click='deleteProduct($index)'>Delete</button></td>
+        </tr>
+      </table>
+
+    </div>
+  </body>
+</html>

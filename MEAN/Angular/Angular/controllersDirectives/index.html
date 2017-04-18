@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Food!</title>
+    <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+    <script>
+var app = angular.module('app', []);
+app.controller('foodsController', ['$scope', function($scope) {
+    $scope.foods = [];
+    $scope.addFood = function() {
+        $scope.foods.push($scope.food);
+        $scope.food = "";
+    }
+}]);
+    </script>
+</head>
+
+<body>
+    <div ng-controller='foodsController'>
+        <div>
+            <h1>Add Food</h1>
+            <form> <input type="text" ng-model='food'> <input type="submit" value="Add Food" ng-click="addFood()"> </form>
+            <p ng-if="food">Currently typing: {{food}} </p>
+        </div>
+        <div>
+            <h2>Food Stuff</h2> <input placeholder="filter..." type="text" ng-model="foodFilter">
+            <div ng-repeat="food in foods | filter:foodFilter track by $index">
+                <p>{{food}}</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
