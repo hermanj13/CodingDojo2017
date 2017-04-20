@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <title>Users</title>
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+<script>
+    var myApp = angular.module('myApp', ['ngRoute']);
+    myApp.config(function ($routeProvider) {
+      $routeProvider
+        .when('/',{
+            templateUrl: 'partials/customizeUsers.html',
+        })
+        .when('/userList',{
+            templateUrl: 'partials/userList.html'
+        })
+        .otherwise({
+          redirectTo: '/'
+        });
+    });
+
+    myApp.factory('userFactory', function(){
+      var users= [{first: 'Jake', last:'Herman', lang:'Javascript'}, {first: 'Jingle', last:'Jangles', lang:'French'}, {first: 'Lone', last:'Jedi', lang:'Ruby'}, {first: "Whiskey Sippin'", last:'Rae Rae', lang:'Python'}];
+      factory = {};
+      factory.getUsers = function(callback){
+        callback(users)
+      }
+      factory.newUser = function(data){
+        users.push(data);
+      }
+      factory.deleteUser = function(i){
+        users.splice(i,1)
+      }
+      return factory;
+    })
+
+    myApp.controller('CustomizeUsersController', ['$scope', 'userFactory', function($scope, userFactory){
+      $scope.users = [];
+      userFactory.getUsers(function(data){
+        $scope.users = data;
+      })
+      $scope.createUser = function(){
+        userFactory.newUser($scope.newUser);
+        $scope.newUser = {};
+      }
+      $scope.deleteUser = function(i){
+        userFactory.deleteUser(i);
+      }
+    }]);
+
+    myApp.controller('UserListsController', ['$scope', 'userFactory', function($scope, userFactory){
+      $scope.users = [];
+      userFactory.getUsers(function(data){
+        $scope.users = data;
+      })
+    }]);
+    </script>
+  </head>
+  <body>
+    <div ng-app='myApp'>
+        <a href="#!/">Customize Users</a> | <a href="#!/userList">User List</a>
+        <div ng-view="">
+        </div>
+    </div>
+  </body>
+</html>

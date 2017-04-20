@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='friendApp'>
+  <head>
+    <meta charset="UTF-8">
+    <script src='angular/angular.js'></script>
+    <script src='angular-route/angular-route.js'></script>
+    <script src="assets/app.js" charset="utf-8"></script>
+    <script src="assets/controllers/editController.js"></script>
+    <script src="assets/controllers/newController.js"></script>
+    <script src="assets/controllers/listController.js"></script>
+    <script src="assets/factories/friendFactory.js"></script>
+
+    </script>
+
+    </script>
+    <title>MEAN Friends</title>
+  </head>
+  <body>
+    <div >
+      <a href="#!/">Home</a> | <a href="#!/new">New Friend</a>
+        <div ng-view="">
+        </div>
+    </div>
+  </body>
+</html>

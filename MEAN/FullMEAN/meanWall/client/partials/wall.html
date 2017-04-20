@@ -1,0 +1,18 @@
+<h1>Full MEAN Wall</h1>
+<h3>Welcome {{username}}</h3>
+<hr />
+<h5>Post a Message</h5>
+<textarea ng-model="newPost.text" rows="8" cols="80"></textarea>
+<p><button ng-click="createPost()">Post a Message!</button></p>
+
+<div ng-repeat="post in posts">
+  <h3>{{post._user.name}} {{post.createdAt | date: 'short'}}</h3>
+  <p>{{post.text}}</p>
+  <div ng-repeat="comment in post.comments" style="margin-left: 15px">
+    <h3>{{comment.name}} {{comment.createdAt | date: 'short'}}</h3>
+    <p>{{comment.text}}</p>
+  </div>
+  <textarea ng-model="newComment[post._id].text" rows="8" cols="80"></textarea>
+  <p><button ng-click="createComment(post._id)">Post Comment</button></p>
+  <hr />
+</div>

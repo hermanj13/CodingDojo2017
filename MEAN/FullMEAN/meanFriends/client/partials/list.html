@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr ng-repeat="friend in friends">
+    <td>{{friend.first}} {{friend.last}}</td>
+    <td><a href="#!/edit/{{friend._id}}">Edit</a></td>
+    <td><a href="" ng-click='deleteFriend(friend._id)'>Delete Friend</a></td>
+  </tr>
+</table>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="wallApp">
+  <head>
+    <meta charset="utf-8">
+    <script src='angular/angular.js'></script>
+    <script src='angular-route/angular-route.js'></script>
+    <script src='angular-cookies/angular-cookies.js'></script>
+    <script src="assets/app.js" charset="utf-8"></script>
+    <script src="assets/controllers/userController.js"></script>
+    <script src="assets/controllers/postController.js"></script>
+    <script src="assets/factories/wallFactory.js"></script>
+    <title>MEAN Wall</title>
+  </head>
+  <body>
+    <div ng-controller="userController" ng-show="flag">
+      <button ng-click="logout()" >Logout</button>
+    </div>
+    <div ng-view="">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<div ng-controller="welcomeController">
+	<h1>You have hit a new route!</h1>
+	<p>This partial is found in client/assets/partials/new_page.html</p>
+	<input type="text" ng-model="user.first_name">
+	<input type="text" ng-model="user.last_name">
+	<input type="submit" ng-click="create()"><--- this button will create a user!
+	<h1>{{console_message}}</h1>
+	<div ng-if="newUser">
+		<h2>My new user!</h2>
+		<p>{{newUser.first_name}} {{newUser.last_name}}</p>
+	</div>
+</div>
