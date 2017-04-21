@@ -59,3 +59,25 @@ function selectionSort(arr) {
 }
 
 console.log(selectionSort(blue))
+
+names = [{ firstname: 'Jake', lastname: 'Herman' }, { firstname: 'Will', lastname: 'Bobbies' }, { firstname: 'Will', lastname: 'Smith' }, { firstname: 'John', lastname: 'Smith' }, { firstname: 'Greg', lastname: 'Dinamo' }, { firstname: 'Greg', lastname: 'Wilson' }, { firstname: 'Greg', lastname: 'Bobby' }, { firstname: 'Dan', lastname: 'Schnider' }, { firstname: 'Harry', lastname: 'Potter' }, { firstname: 'Greg', lastname: 'Zero' }, { firstname: 'Vil', lastname: 'Nitro' }, { firstname: 'Ginny', lastname: 'Potter' }, { firstname: 'James', lastname: 'Potter' }]
+
+function multikeySort(arr) {
+    arr.sort(
+        function(a, b) {
+            var o1 = a.lastname;
+            var o2 = b.lastname;
+
+            var p1 = a.firstname;
+            var p2 = b.firstname;
+
+            if (o1 < o2) return -1;
+            if (o1 > o2) return 1;
+            if (p1 < p2) return -1;
+            if (p1 > p2) return 1;
+            return 0;
+        })
+    return arr;
+}
+
+console.log(multikeySort(names));
