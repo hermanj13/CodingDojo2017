@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="storeApp">
   <head>
     <meta charset="utf-8">
-    <title>Simple Start Up MEAN</title>
-    <script type="text/javascript" src="moment/moment.js"></script>
-    <script src="angular/angular.js" charset="utf-8"></script>
-    <script src="angular-route/angular-route.js" charset="utf-8"></script>
-    <script src="angular-cookies/angular-cookies.js"></script>
+    <script src='angular/angular.js'></script>
+    <script src='angular-route/angular-route.js'></script>
+    <script src='angular-cookies/angular-cookies.js'></script>
     <script src="assets/app.js" charset="utf-8"></script>
-    <script src="assets/factories/welcomeFactory.js" charset="utf-8"></script>
-    <script src="assets/controllers/welcomeController.js" charset="utf-8"></script>
+    <!-- Customers -->
+    <script src="assets/controllers/dashboardController.js"></script>
+    <!-- Customers -->
+    <script src="assets/controllers/customerController.js"></script>
+    <script src="assets/factories/customerFactory.js"></script>
+    <!-- Product -->
+    <script src="assets/controllers/productController.js"></script>
+    <script src="assets/factories/productFactory.js"></script>
+    <!-- Orders -->
+    <script src="assets/controllers/orderController.js"></script>
+    <script src="assets/factories/orderFactory.js"></script>
+    <title>Mini MEAN Store</title>
   </head>
   <body>
-  <a href="#!/">Info</a> | 
-  <a href="#!/newroute">Another Route</a>
-    <div ng-view=""></div>
+    <a href="#!/">Dashboard</a> | <a href="#!/products">Products</a> | <a href="#!/orders">Orders</a> | <a href="#!/customers">Customers</a> | <a href="">Settings</a>
+    <div ng-view="">
+    </div>
   </body>
 </html>
