@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   private
     def logged_in
-      if !session[:user_id]
+      if !session[:id]
         redirect_to '/'
       end
     end
